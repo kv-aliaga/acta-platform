@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/AppActa/acta-platform.git
+    repoURL: https://github.com/kv-aliaga/acta-platform.git
     targetRevision: main
     path: apps
 

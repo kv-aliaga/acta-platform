@@ -75,7 +75,7 @@ jobs:
               .apiVersion == "argoproj.io/v1alpha1" and
               .kind == "Application" and
               .metadata.namespace == "argocd" and
-              .spec.source.repoURL == "https://github.com/AppActa/acta-platform.git" and
+              .spec.source.repoURL == "https://github.com/kv-aliaga/acta-platform.git" and
               .spec.source.targetRevision == "main" and
               .spec.source.path == "apps" and
               .spec.destination.server == "https://kubernetes.default.svc" and
