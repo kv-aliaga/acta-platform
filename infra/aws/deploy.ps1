@@ -74,6 +74,11 @@ $secureClientSecret = $null
 # entrega os manifests das aplicações para o Argo CD
 kubectl apply -f .\argocd\prod.yaml
 
+# acompanha novas imagens da Mongo API no GHCR e atualiza a Application do Argo CD
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/v1.3.0/config/install.yaml
+kubectl rollout status deployment/argocd-image-updater-controller -n argocd --timeout=5m
+kubectl apply -f .\argocd\mongo-image-updater.yaml
+
 # cria os endereços sslip.io usando o Elastic IP
 $ipHost = $publicIp.Replace(".", "-")
 $hosts = @{
