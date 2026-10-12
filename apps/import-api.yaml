@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: acta-import-api
-          image: ghcr.io/kv-aliaga/acta-import-api:sha-27e9727839976c746607ce9f98cab154f30cae2d
+          image: ghcr.io/kv-aliaga/acta-import-api:sha-3f743dff15c830d2094d0bc69fde84ead419e9a0
           imagePullPolicy: IfNotPresent
 
           ports:
@@ -98,7 +98,7 @@ spec:
     spec:
       containers:
         - name: acta-import-worker
-          image: ghcr.io/kv-aliaga/acta-import-api:sha-27e9727839976c746607ce9f98cab154f30cae2d
+          image: ghcr.io/kv-aliaga/acta-import-api:sha-3f743dff15c830d2094d0bc69fde84ead419e9a0
           imagePullPolicy: IfNotPresent
           command: ["python", "worker.py"]
 
